@@ -170,3 +170,6 @@ class Inspire_Left_Hand_JointIndex(IntEnum):
     kLeftHandIndex = 9
     kLeftHandThumbBend = 10
     kLeftHandThumbRotation = 11
+
+#if __name__ == '__main__':
+#    print("robot_hand_inspire running...")

@@ -22,7 +22,7 @@ class TeleVision:
         if ngrok:
             self.vuer = Vuer(host='0.0.0.0', queries=dict(grid=False), queue_len=3)
         else:
-            self.vuer = Vuer(host='0.0.0.0', cert=cert_file, key=key_file, queries=dict(grid=False), queue_len=3)
+            self.vuer = Vuer(host='0.0.0.0', port = 8012, cert=cert_file, key=key_file, queries=dict(grid=False), queue_len=3)
 
         self.vuer.add_handler("HAND_MOVE")(self.on_hand_move)
         self.vuer.add_handler("CAMERA_MOVE")(self.on_cam_move)

@@ -307,12 +307,13 @@ class ImageServer:
 if __name__ == "__main__":
     config = {
         'fps': 30,
-        'head_camera_type': 'opencv',
-        'head_camera_image_shape': [480, 1280],  # Head camera resolution
-        'head_camera_id_numbers': [0],
-        'wrist_camera_type': 'opencv',
-        'wrist_camera_image_shape': [480, 640],  # Wrist camera resolution
-        'wrist_camera_id_numbers': [2, 4],
+        'head_camera_type': 'realsense',
+        'head_camera_image_shape': [480, 640],
+        'head_camera_id_numbers': ['327122070830'],  # 
+        # Wrist 相机不启用
+        # 'wrist_camera_type': 'opencv',
+        # 'wrist_camera_image_shape': [480, 640],
+        # 'wrist_camera_id_numbers': [2, 4],
     }
 
     server = ImageServer(config, Unit_Test=False)

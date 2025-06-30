@@ -1,0 +1,52 @@
+L1+A
+L1+UP
+
+
+进入调试模式得进入阻尼模式
+L1+A
+L2+R2
+L2+A 是测试有没有进入调试模式
+L2+B 回到阻尼模式
+
+
+
+关机
+L1+A
+
+
+
+Link
+ping 192.168.123.161
+ifconfig
+
+enp8s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.123.222  netmask 255.255.255.0  broadcast 192.168.123.255
+        
+        
+连接pc2
+ssh unitree@192.168.123.164
+code: 123
+
+
+连接wifi
+sudo apt install network-manager -y
+sudo nmtui
+
+
+sudo nmcli radio wifi on
+sudo ip link set wlan0 up
+nmcli device wifi list
+
+sudo nmcli device wifi connect "Mars_5G" password "mars6666"
+
+
+
+realsense camera id number:327122070830
+
+
+灵巧手：
+cd ~/h1_inspire_service/build
+sudo ./inspire_hand -s /dev/ttyUSB1
+sudo ./inspire_hand -s /dev/ttyUSB2
+./h1_hand_example
+

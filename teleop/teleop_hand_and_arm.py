@@ -38,12 +38,13 @@ if __name__ == '__main__':
     # image client: img_config should be the same as the configuration in image_server.py (of Robot's development computing unit)
     img_config = {
         'fps': 30,
-        'head_camera_type': 'opencv',
-        'head_camera_image_shape': [480, 1280],  # Head camera resolution
-        'head_camera_id_numbers': [0],
-        'wrist_camera_type': 'opencv',
-        'wrist_camera_image_shape': [480, 640],  # Wrist camera resolution
-        'wrist_camera_id_numbers': [2, 4],
+        'head_camera_type': 'realsense',
+        'head_camera_image_shape': [480, 640],
+        'head_camera_id_numbers': ['327122070830'], 
+        # Wrist 相机不启用
+        # 'wrist_camera_type': 'opencv',
+        # 'wrist_camera_image_shape': [480, 640],
+        # 'wrist_camera_id_numbers': [2, 4],
     }
     ASPECT_RATIO_THRESHOLD = 2.0 # If the aspect ratio exceeds this value, it is considered binocular
     if len(img_config['head_camera_id_numbers']) > 1 or (img_config['head_camera_image_shape'][1] / img_config['head_camera_image_shape'][0] > ASPECT_RATIO_THRESHOLD):
